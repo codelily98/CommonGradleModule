@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/togate-bom" />
+            <option value="$PROJECT_DIR$/togate-core" />
+            <option value="$PROJECT_DIR$/togate-sample-app" />
+            <option value="$PROJECT_DIR$/togate-starter-web" />
+            <option value="$PROJECT_DIR$/togate-utils-core" />
+            <option value="$PROJECT_DIR$/togate-web-api" />
+            <option value="$PROJECT_DIR$/togate-web-autoconfigure" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: togate-sample-app
+
+server:
+  port: 8080
+
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

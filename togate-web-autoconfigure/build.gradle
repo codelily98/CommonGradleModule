@@ -1,0 +1,20 @@
+dependencies {
+    api project(':togate-web-api')
+
+    implementation(
+        'org.springframework.boot:' +
+        'spring-boot-autoconfigure'
+    )
+
+    compileOnly 'org.springframework:spring-webmvc'
+
+    annotationProcessor(
+        'org.springframework.boot:' +
+        'spring-boot-configuration-processor'
+    )
+
+    testImplementation(
+        'org.springframework.boot:' +
+        'spring-boot-test'
+    )
+}

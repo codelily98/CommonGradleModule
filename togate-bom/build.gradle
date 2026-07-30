@@ -1,0 +1,44 @@
+plugins {
+    id 'java-platform'
+    id 'maven-publish'
+}
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    api platform(
+            "org.springframework.boot:" +
+                    "spring-boot-dependencies:${springBootVersion}"
+    )
+
+    constraints {
+        api project(':togate-core')
+        api project(':togate-utils-core')
+        api project(':togate-starter-web')
+
+        api project(':togate-security-api')
+        api project(':togate-starter-security-session')
+        api project(':togate-starter-security-jwt')
+
+        api project(':togate-starter-data-jpa')
+        api project(':togate-starter-data-mybatis')
+
+        api project(':togate-starter-webclient')
+        api project(':togate-starter-tcp')
+
+        api(
+                'org.mybatis.spring.boot:' +
+                        'mybatis-spring-boot-starter:4.0.0'
+        )
+    }
+}
+
+publishing {
+    publications {
+        mavenBom(MavenPublication) {
+            from components.javaPlatform
+        }
+    }
+}

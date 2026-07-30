@@ -1,0 +1,58 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'togate-framework'
+
+include(
+    // 기존 모듈
+    'togate-bom',
+    'togate-core',
+    'togate-utils-core',
+    'togate-web-api',
+    'togate-web-autoconfigure',
+    'togate-starter-web',
+    'togate-sample-app',
+
+    // Security 공통
+    'togate-security-api',
+    'togate-security-common',
+
+    // Session
+    'togate-security-session-autoconfigure',
+    'togate-starter-security-session',
+
+    // JWT
+    'togate-security-jwt-autoconfigure',
+    'togate-starter-security-jwt',
+
+    // JPA
+    'togate-data-jpa-autoconfigure',
+    'togate-starter-data-jpa',
+
+    // MyBatis
+    'togate-data-mybatis-autoconfigure',
+    'togate-starter-data-mybatis',
+
+    // WebClient
+    'togate-webclient-api',
+    'togate-webclient-autoconfigure',
+    'togate-starter-webclient',
+
+    // TCP
+    'togate-tcp-api',
+    'togate-tcp-spring-integration',
+    'togate-tcp-autoconfigure',
+    'togate-starter-tcp'
+)

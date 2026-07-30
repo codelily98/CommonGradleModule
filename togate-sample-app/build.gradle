@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot'
+}
+
+java {
+    toolchain {
+        languageVersion =
+            JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation platform(
+        project(':togate-bom')
+    )
+
+    implementation project(
+        ':togate-starter-web'
+    )
+
+    testImplementation(
+        'org.springframework.boot:' +
+        'spring-boot-starter-test'
+    )
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
